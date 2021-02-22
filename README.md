@@ -3,14 +3,54 @@
 
 <p>
   <a href="https://hai2007.gitee.io/npm-downloads?interval=7&packages=@clunch/bar"><img src="https://img.shields.io/npm/dm/@clunch/bar.svg" alt="downloads"></a>
-  <a href="https://packagephobia.now.sh/result?p=@clunch/bar"><img src="https://packagephobia.now.sh/badge?p=@clunch/bar" alt="install size"></a>
-  <a href="https://www.jsdelivr.com/package/npm/@clunch/bar"><img src="https://data.jsdelivr.com/v1/package/npm/@clunch/bar/badge" alt="CDN"></a>
   <a href="https://www.npmjs.com/package/@clunch/bar"><img src="https://img.shields.io/npm/v/@clunch/bar.svg" alt="Version"></a>
-  <a href="https://github.com/clunch-contrib/bar/graphs/code-frequency" target='_blank'><img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/clunch-contrib/bar"></a>
   <a href="https://github.com/clunch-contrib/bar/graphs/commit-activity" target='_blank'><img alt="GitHub repo commit" src="https://img.shields.io/github/last-commit/clunch-contrib/bar"></a>
   <a href="https://github.com/clunch-contrib/bar/blob/master/LICENSE"><img src="https://img.shields.io/npm/l/@clunch/bar.svg" alt="License"></a>
   <a href="https://github.com/clunch-contrib/bar" target='_blank'><img alt="GitHub repo stars" src="https://img.shields.io/github/stars/clunch-contrib/bar?style=social"></a>
 </p>
+
+## 如何使用？
+
+首先，需要安装npm包（目前我们中支持npm方式管理）：
+
+```
+npm install --save clunch @clunch/bar
+```
+
+然后注册组件：
+
+```js
+import Clunch from 'clunch';
+import bar from '@clunch/bar';
+
+Clunch.series('ui-bar',bar);
+```
+
+然后，你就可以使用这个组件了：
+
+```html
+<ui-bar data='Array' ruler='Array<String>'/>
+```
+
+- data:数据，应该是一个数组（比如：``` [[19,22,32],[1,22,3],[1,2,63],...] ```或``` [51,23,3,...] ```）
+- ruler:刻度尺显示的内容（比如：``` ["一月","二月","三月",...] ```）
+
+除了上面的必输项外，还有下列可选项：
+
+|属性|类型|描述|默认值|可选值|
+|----|----|----|----|----|
+|x|number|图形左上角位置横坐标|0||
+|y|number|图形左上角位置纵坐标|0||
+|width|number|图形宽|画布的宽||
+|height|number|图形高|画布的高||
+|type|string|图形的类型|normal|normal、circle|
+|colors|Array\<string\>|柱状条颜色|内置循环色||
+|max-value|number|最大值|动态计算得出||
+|min-value|number|最小值|动态计算得出||
+
+由于此组件是基于[Clunch](https://github.com/hai2007/clunch)开发的，我们默认你已经掌握了相关知识。
+
+[<< 你可以点击此次学习Clunch.js如何使用](https://hai2007.gitee.io/clunch/#/course/introduce?fixed=top)
 
 ## 联系我们
 
