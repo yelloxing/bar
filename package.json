@@ -1,10 +1,10 @@
 {
   "name": "@clunch/bar",
-  "version": "0.0.0-alpha",
+  "version": "0.1.0-alpha",
   "description": "📊 柱状图组件，包括直方柱状图和极坐标柱状图等常见的柱状图。",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "webpack-dev-server --config webpack.config.js"
   },
   "repository": {
     "type": "git",
@@ -20,5 +20,14 @@
   "bugs": {
     "url": "https://github.com/clunch-contrib/bar/issues"
   },
-  "homepage": "https://github.com/clunch-contrib/bar#readme"
+  "homepage": "https://github.com/clunch-contrib/bar#readme",
+  "dependencies": {
+    "@hai2007/tool": "^0.6.2"
+  },
+  "devDependencies": {
+    "clunch": "^1.4.3",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.11.0"
+  }
 }
